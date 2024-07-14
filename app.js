@@ -4,7 +4,9 @@ const todoRouter = require("./routes/todoRoutes");
 
 const app = express();
 
-app.use(cors());
+app.use(cors({
+    origin:"http://localhost:5173/"
+}));
 
 app.use(express.json());
 app.use(express.static(`${__dirname}/public`));
